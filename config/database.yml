@@ -18,8 +18,12 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+production:  
+  database: phonemas_production
+  username: phonemas_user
+  password: 3N4IF3P9CcceQEv4L
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
   pool: 5
-  timeout: 5000
+  socket: /tmp/mysql.sock 
