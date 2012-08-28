@@ -42,13 +42,17 @@ gem 'jquery-rails'
 # gem 'ruby-debug'
 gem 'devise'
 
-git 'git://github.com/resolve/refinerycms.git', :branch => '2-0-stable' do
+git 'git://github.com/resolve/refinerycms.git' do
   gem 'refinerycms-core' #You can leave this out if you like. It's a dependency of the other engines.
   gem 'refinerycms-dashboard'
   gem 'refinerycms-images'
   gem 'refinerycms-pages'
   gem 'refinerycms-resources'
+  gem 'refinerycms-resources'
 end
 
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem 'refinerycms-blog', '~> 2.0.0'
+gem 'refinerycms-blog', :git => 'git@github.com:fonemstr/refinerycms-blog.git'
+#gem 'refinerycms-blog', :path => '../refinerycms-blog'
+gem 'refinerycms-settings', :git => 'git://github.com/parndt/refinerycms-settings.git', :branch =>
+'master'

@@ -1,45 +1,68 @@
 GIT
-  remote: git://github.com/resolve/refinerycms.git
-  revision: 637be40f4c6004bca0a383d6da7bd17f36e2df70
-  branch: 2-0-stable
+  remote: git://github.com/parndt/refinerycms-settings.git
+  revision: 37e592a43dcd2ed24a11f678cd1e3fc76fa9cf75
+  branch: master
   specs:
-    refinerycms-core (2.0.5)
+    refinerycms-settings (2.1.0.dev)
       acts_as_indexed (~> 0.7.7)
+      refinerycms-core (~> 2.1.0.dev)
+
+GIT
+  remote: git://github.com/resolve/refinerycms.git
+  revision: 3223ad957bd0076cbdcefcf243db956bfca1af4a
+  specs:
+    refinerycms-core (2.1.0.dev)
+      actionpack (>= 3.1.3, < 3.3)
+      activerecord (>= 3.1.3, < 3.3)
       awesome_nested_set (~> 2.1.3)
       coffee-rails (~> 3.2.1)
-      friendly_id (~> 4.0.1)
-      globalize3 (~> 0.2.0)
       jquery-rails (~> 2.0.0)
-      rails (>= 3.1.3, < 3.3)
+      railties (>= 3.1.3, < 3.3)
       sass-rails (~> 3.2.3)
       truncate_html (~> 0.5)
-      uglifier (>= 1.0.3)
       will_paginate (~> 3.0.2)
-    refinerycms-dashboard (2.0.5)
-      refinerycms-core (= 2.0.5)
-    refinerycms-images (2.0.5)
+    refinerycms-dashboard (2.1.0.dev)
+      refinerycms-core (= 2.1.0.dev)
+    refinerycms-images (2.1.0.dev)
+      acts_as_indexed (~> 0.7.7)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-      refinerycms-core (= 2.0.5)
-    refinerycms-pages (2.0.5)
+      refinerycms-core (= 2.1.0.dev)
+    refinerycms-pages (2.1.0.dev)
+      acts_as_indexed (~> 0.7.7)
       awesome_nested_set (~> 2.1.3)
       babosa (!= 0.3.6)
-      refinerycms-core (= 2.0.5)
+      friendly_id (~> 4.0.4)
+      globalize3 (~> 0.2.0)
+      refinerycms-core (= 2.1.0.dev)
       seo_meta (~> 1.3.0)
-    refinerycms-resources (2.0.5)
+    refinerycms-resources (2.1.0.dev)
+      acts_as_indexed (~> 0.7.7)
       dragonfly (~> 0.9.8)
       rack-cache (>= 0.5.3)
-      refinerycms-core (= 2.0.5)
+      refinerycms-core (= 2.1.0.dev)
 
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 34f760b116905e1a0295e3e4edea5240847a79c5
+  revision: e76accf9ffa9e549155a4367af18f9db3194e1f5
   specs:
-    twitter-bootstrap-rails (2.1.1)
+    twitter-bootstrap-rails (2.1.3)
       actionpack (>= 3.1)
       less-rails (~> 2.2.3)
       railties (>= 3.1)
-      therubyracer (= 0.10.1)
+      therubyracer (~> 0.10.2)
+
+GIT
+  remote: git@github.com:fonemstr/refinerycms-blog.git
+  revision: ba1e12f7331e5876d38c8033ffa0d4cf1b2f0471
+  specs:
+    refinerycms-blog (2.1.0.dev)
+      acts-as-taggable-on
+      filters_spam (~> 0.2)
+      rails_autolink (~> 1.0.7)
+      refinerycms-core (~> 2.1.0.dev)
+      refinerycms-settings (~> 2.1.0.dev)
+      seo_meta (~> 1.3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -77,7 +100,7 @@ GEM
     arel (3.0.2)
     awesome_nested_set (2.1.4)
       activerecord (>= 3.0.0)
-    babosa (0.3.7)
+    babosa (0.3.8)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     coffee-rails (3.2.2)
@@ -108,7 +131,7 @@ GEM
     i18n (0.6.0)
     journey (1.0.4)
     jquery-rails (2.0.3)
-      railties (>= 3.1.0, < 5.0)
+      railties (< 5.0, >= 3.1.0)
       thor (~> 0.14)
     json (1.7.5)
     less (2.2.1)
@@ -156,15 +179,6 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
-    refinerycms-blog (2.0.4)
-      acts-as-taggable-on
-      filters_spam (~> 0.2)
-      rails_autolink
-      refinerycms-core (~> 2.0.3)
-      refinerycms-settings (~> 2.0.1)
-      seo_meta (~> 1.3.0)
-    refinerycms-settings (2.0.2)
-      refinerycms-core (~> 2.0.1)
     sass (3.2.1)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -177,7 +191,7 @@ GEM
       rack (~> 1.0)
       tilt (!= 1.3.0, ~> 1.1)
     sqlite3 (1.3.6)
-    therubyracer (0.10.1)
+    therubyracer (0.10.2)
       libv8 (~> 3.3.10)
     thor (0.16.0)
     tilt (1.3.3)
@@ -203,12 +217,13 @@ DEPENDENCIES
   json
   mysql2
   rails (= 3.2.6)
-  refinerycms-blog (~> 2.0.0)
+  refinerycms-blog!
   refinerycms-core!
   refinerycms-dashboard!
   refinerycms-images!
   refinerycms-pages!
   refinerycms-resources!
+  refinerycms-settings!
   sass-rails (~> 3.2.3)
   sqlite3
   twitter-bootstrap-rails!
